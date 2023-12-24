@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Phishing Site Checker</title>
+        <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+        <nav>
+            <div class="navbar">
+              <div class="logo"><a href="#">Spam URL Detector</a></div>
+              <ul class="menu">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#Feedback">Feedback</a></li>
+              </ul>
+            </div>
+        </nav>
+        <section id="Home">
+            <form method="POST" action="/">
+                <label for="url-input">Enter a URL:</label>
+                <input type="text" id="url-input" placeholder="https://example.com" name="url">
+                <input type="submit" value="Check">
+            </form>
+        </section>
+        {% if result %}
+            <div id="result">
+                <h2 style="text-align: center">The Website is {{ result }}</h2>
+            </div>
+        {% endif %}
+        <section id="About">About Section</section>
+        <section id="Contact">Contact Section</section>
+        <section id="Feedback">Feedback Section</section>
+        <div class="button">
+            <a href="#Home"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </body>
+    </html>
